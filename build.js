@@ -61,7 +61,7 @@ if (fs.existsSync(path.dirname(expoJsPath))) fs.writeFileSync(expoJsPath, js, 'u
 
 // 5. index.html para o site (GitHub Pages): o mesmo pacote, com título, descrição, ícone e
 //    a imagem de partilha (WhatsApp, Facebook). SITE_URL é o endereço público do site.
-const SITE_URL = 'https://adonninho.github.io/bumba/';
+const SITE_URL = 'https://bumba-jade.vercel.app/';
 const desc = 'Biscatos, trabalho fixo e carreira em Angola. Mostra o que sabes fazer, não quem conheces.';
 const icon = "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect x='1' y='1' width='30' height='30' rx='7' fill='%23f4b41a' stroke='%231c1a17' stroke-width='2'/%3E%3Cpath d='M2 2L16 16L2 30ZM30 2L16 16L30 30Z' fill='%23d9412b'/%3E%3C/svg%3E";
 const head = [

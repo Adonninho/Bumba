@@ -1,6 +1,6 @@
 # BUMBA — Sem cunha. Só bumba.
 
-**Experimentar a app:** https://adonninho.github.io/bumba/
+**Experimentar a app:** https://bumba-jade.vercel.app/
 
 **Bumbar é trabalhar.** A BUMBA junta numa só app o biscato de hoje, o trabalho fixo em casas e famílias, e a carreira nas empresas angolanas. Do kota que precisa de jardineiro para sábado ao banco que contrata no Huambo: aqui mostras o que sabes fazer, não quem conheces.
 
@@ -34,7 +34,7 @@ No computador a app abre com menu lateral e colunas; no telemóvel fica igual à
 | `mapa.html` | O mapa «Perto de ti» (Leaflet + mosaicos Esri). |
 | `fotos/` | Fotos da demo. Créditos e licenças em [fotos/CREDITOS.md](fotos/CREDITOS.md). |
 | `build.js` | `node build.js` junta `app.html`, `mapa.html` e `fotos/` e gera os ficheiros abaixo. |
-| `index.html` | O site (GitHub Pages), com título e imagem de partilha (`partilha.png`). Gerado. |
+| `index.html` | O site (alojado na Vercel), com título e imagem de partilha (`partilha.png`). Gerado. |
 | `bumba.html` | A app num só ficheiro, para abrir no navegador. Gerado. |
 | `bumba-html.js`, `bumba/` | A app no telemóvel: projecto Expo (React Native) com a app numa WebView. Ver [LEIA-ME.md](LEIA-ME.md). |
 | `BACKEND.md` | Guia para o servidor: modelo de dados, regras e onde ligar a API. |

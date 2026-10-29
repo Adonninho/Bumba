@@ -1,0 +1,6 @@
+bumba/
+node_modules/
+.expo/
+.vscode/
+.claude/
+bumba-html.js
