@@ -1,0 +1,130 @@
+{
+  "quadro": {
+    "ficheiro": "quadro.jpg",
+    "titulo": "Electrical panel opened.jpg",
+    "autor": "FuriousYogi",
+    "licenca": "CC BY-SA 4.0",
+    "licencaUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "pagina": "https://commons.wikimedia.org/wiki/File:Electrical_panel_opened.jpg"
+  },
+  "solar": {
+    "ficheiro": "solar.jpg",
+    "titulo": "Solar installation technician on rooftop (5392894792).jpg",
+    "autor": "CoCreatr from Yokohama, Japan",
+    "licenca": "CC BY-SA 2.0",
+    "licencaUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+    "pagina": "https://commons.wikimedia.org/wiki/File:Solar_installation_technician_on_rooftop_(5392894792).jpg"
+  },
+  "trancas": {
+    "ficheiro": "trancas.jpg",
+    "titulo": "African girl braids.jpg",
+    "autor": "Cestmoicarisse",
+    "licenca": "CC BY-SA 4.0",
+    "licencaUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "pagina": "https://commons.wikimedia.org/wiki/File:African_girl_braids.jpg"
+  },
+  "pasteis": {
+    "ficheiro": "pasteis.jpg",
+    "titulo": "Pastel de Nata - Cornish Bakery, Lewes 2026-07-03.jpg",
+    "autor": "Andy Li",
+    "licenca": "CC0",
+    "licencaUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+    "pagina": "https://commons.wikimedia.org/wiki/File:Pastel_de_Nata_-_Cornish_Bakery,_Lewes_2026-07-03.jpg"
+  },
+  "pasteis2": {
+    "ficheiro": "pasteis2.jpg",
+    "titulo": "Pastel de nata (18616473070).jpg",
+    "autor": "fw42 from Germany",
+    "licenca": "CC BY 2.0",
+    "licencaUrl": "https://creativecommons.org/licenses/by/2.0",
+    "pagina": "https://commons.wikimedia.org/wiki/File:Pastel_de_nata_(18616473070).jpg"
+  },
+  "redes": {
+    "ficheiro": "redes.jpg",
+    "titulo": "19-inch rackmount Ethernet switches and patch panels.jpg",
+    "autor": "Dsimic",
+    "licenca": "CC BY-SA 4.0",
+    "licencaUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "pagina": "https://commons.wikimedia.org/wiki/File:19-inch_rackmount_Ethernet_switches_and_patch_panels.jpg"
+  },
+  "redes2": {
+    "ficheiro": "redes2.jpg",
+    "titulo": "Cable closet bh.jpg",
+    "autor": "",
+    "licenca": "Public domain",
+    "licencaUrl": "",
+    "pagina": "https://commons.wikimedia.org/wiki/File:Cable_closet_bh.jpg"
+  },
+  "casabanho": {
+    "ficheiro": "casabanho.jpg",
+    "titulo": "Mid-City New Orleans Bathroom - Tile in the Shower.jpg",
+    "autor": "Bart Everson",
+    "licenca": "CC BY 2.0",
+    "licencaUrl": "https://creativecommons.org/licenses/by/2.0",
+    "pagina": "https://commons.wikimedia.org/wiki/File:Mid-City_New_Orleans_Bathroom_-_Tile_in_the_Shower.jpg"
+  },
+  "jardim": {
+    "ficheiro": "jardim.jpg",
+    "titulo": "Man starting a lawn mower in a green garden.jpg",
+    "autor": "Shixart1985",
+    "licenca": "CC BY 2.0",
+    "licencaUrl": "https://creativecommons.org/licenses/by/2.0",
+    "pagina": "https://commons.wikimedia.org/wiki/File:Man_starting_a_lawn_mower_in_a_green_garden.jpg"
+  },
+  "pintura": {
+    "ficheiro": "pintura.jpg",
+    "titulo": "Paint roller 4.jpg",
+    "autor": "Michael Cory",
+    "licenca": "CC BY 2.0",
+    "licencaUrl": "https://creativecommons.org/licenses/by/2.0",
+    "pagina": "https://commons.wikimedia.org/wiki/File:Paint_roller_4.jpg"
+  },
+  "mudanca": {
+    "ficheiro": "mudanca.jpg",
+    "titulo": "An Overview of Moving Companies and Their Use of Moving Boxes.jpg",
+    "autor": "brownpau",
+    "licenca": "CC BY 2.0",
+    "licencaUrl": "https://creativecommons.org/licenses/by/2.0",
+    "pagina": "https://commons.wikimedia.org/wiki/File:An_Overview_of_Moving_Companies_and_Their_Use_of_Moving_Boxes.jpg"
+  },
+  "cozinha": {
+    "ficheiro": "cozinha.jpg",
+    "titulo": "Muamba.jpg",
+    "autor": "Adriao",
+    "licenca": "CC BY 3.0",
+    "licencaUrl": "https://creativecommons.org/licenses/by/3.0",
+    "pagina": "https://commons.wikimedia.org/wiki/File:Muamba.jpg"
+  },
+  "canalizacao": {
+    "ficheiro": "canalizacao.jpg",
+    "titulo": "Plumber in Alberton(GN10871).jpg",
+    "autor": "State Government Photographer",
+    "licenca": "CC0",
+    "licencaUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+    "pagina": "https://commons.wikimedia.org/wiki/File:Plumber_in_Alberton(GN10871).jpg"
+  },
+  "camiao": {
+    "ficheiro": "camiao.jpg",
+    "titulo": "Africa moves despite its challanges...a vital road to somewhere a major breakdown where it matters most at the bridge.jpg",
+    "autor": "Moses Gichuru",
+    "licenca": "CC BY-SA 4.0",
+    "licencaUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "pagina": "https://commons.wikimedia.org/wiki/File:Africa_moves_despite_its_challanges...a_vital_road_to_somewhere_a_major_breakdown_where_it_matters_most_at_the_bridge.jpg"
+  },
+  "matematica": {
+    "ficheiro": "matematica.jpg",
+    "titulo": "Tutoring Math.jpg",
+    "autor": "Preply.com Images",
+    "licenca": "CC BY 2.0",
+    "licencaUrl": "https://creativecommons.org/licenses/by/2.0",
+    "pagina": "https://commons.wikimedia.org/wiki/File:Tutoring_Math.jpg"
+  },
+  "trancas2": {
+    "ficheiro": "trancas2.jpg",
+    "titulo": "Tresse africaine, nouvelle mariée.jpg",
+    "autor": "Souleymane DIARRA",
+    "licenca": "CC BY 4.0",
+    "licencaUrl": "https://creativecommons.org/licenses/by/4.0",
+    "pagina": "https://commons.wikimedia.org/wiki/File:Tresse_africaine,_nouvelle_mari%C3%A9e.jpg"
+  }
+}

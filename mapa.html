@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="pt">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>BUMBA · Perto de ti</title>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha384-sHL9NAb7lN7rfvG5lfHpm643Xkcjzp4jFvuavGOndn6pjVqS6ny56CAt3nsEVT4H" crossorigin="anonymous">
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha384-cxOPjt7s7Iz04uaHJceBmS+qpjv2JkIHNVcuOrM+YHwZOmJGBXI00mdUXEq65HTH" crossorigin="anonymous"></script>
+<link href="https://fonts.googleapis.com/css2?family=Anybody:wdth,wght@50..150,100..900&family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+html,body{margin:0;height:100%;background:#efe6d4;font-family:Figtree,sans-serif;color:#1c1a17}
+#map{position:absolute;inset:0}
+.leaflet-container{background:#efe6d4;font-family:Figtree,sans-serif}
+.leaflet-tile-pane{filter:sepia(.3) saturate(.85)}
+.pin{transform:translate(-50%,-100%);white-space:nowrap;font:700 12px Figtree,sans-serif;padding:5px 9px;border:1.5px solid #1c1a17;border-radius:999px;background:#f4b41a;color:#1c1a17;box-shadow:2px 2px 0 #1c1a17;cursor:pointer;transition:transform .15s}
+.pin:hover{transform:translate(-50%,-100%) scale(1.08)}
+.pin.f{background:#d7eadf}
+.pin.c{background:#d9412b;color:#fff;border-radius:7px}
+.me{width:16px;height:16px;border-radius:50%;background:#1c1a17;border:3px solid #fff;transform:translate(-50%,-50%);animation:ring 1.8s infinite}
+@keyframes ring{0%{box-shadow:0 0 0 0 rgba(217,65,43,.6)}100%{box-shadow:0 0 0 22px rgba(217,65,43,0)}}
+.top{position:absolute;z-index:1000;left:12px;right:12px;top:8px;display:flex;flex-direction:column;gap:8px;pointer-events:none}
+.chip{align-self:flex-start;background:#fffaf1;border:1.5px solid #1c1a17;box-shadow:3px 3px 0 #1c1a17;border-radius:14px;padding:10px 14px}
+.t{font-family:Anybody,sans-serif;font-weight:800;font-stretch:125%;font-size:17px}
+.s{font-size:12.5px;color:#5b5348;margin-top:2px}
+.lg{display:flex;gap:6px}
+.lg span{display:flex;align-items:center;gap:6px;background:#fffaf1;border:1.5px solid #1c1a17;border-radius:99px;padding:4px 10px;font-size:12px;font-weight:600}
+.lg i{width:10px;height:10px;border-radius:50%;border:1.5px solid #1c1a17}
+.leaflet-control-attribution{font-size:10px;background:rgba(255,250,241,.85)!important}
+.leaflet-bar a{color:#1c1a17}
+</style>
+</head>
+<body>
+<div id="map"></div>
+<div class="top">
+  <div class="lg"><span><i style="background:#f4b41a"></i>Biscato</span><span><i style="background:#d7eadf"></i>Fixo</span><span><i style="background:#d9412b;border-radius:3px"></i>Empresa</span></div>
+</div>
+<script>
+const me = [-8.826, 13.287];
+const P = [
+  { id: 'mario', k: 'b', label: '35 mil', ll: [-8.829, 13.262] },
+  { id: 'teresa', k: 'b', label: '15 mil', ll: [-8.918, 13.186] },
+  { id: 'luzia', k: 'b', label: '10 mil', ll: [-8.834, 13.298] },
+  { id: 'adao', k: 'b', label: '60 mil', ll: [-8.997, 13.272] },
+  { id: 'ngola', k: 'b', label: '8 mil/noite', ll: [-8.790, 13.222] },
+  { id: 'kandengue', k: 'b', label: '12 mil', ll: [-8.905, 13.372] },
+  { id: 'cardoso', k: 'b', label: '25 mil/sem', ll: [-8.826, 13.236] },
+  { id: 'filomena', k: 'f', label: '80 mil/mês', ll: [-8.921, 13.176] },
+  { id: 'graca', k: 'f', label: '120 mil/mês', ll: [-9.003, 13.281] },
+  { id: 'neto', k: 'f', label: '90 mil/mês', ll: [-8.910, 13.197] },
+  { id: 'paulo', k: 'f', label: '150 mil/mês', ll: [-8.806, 13.236] },
+  { id: 'sebastiao', k: 'f', label: '110 mil/mês', ll: [-8.834, 13.226] },
+  { id: 'predio', k: 'f', label: '100 mil/mês', ll: [-8.823, 13.270] },
+  { id: 'palanca', k: 'c', label: 'Palanca Telecom', ll: [-8.815, 13.232] },
+  { id: 'kwanza', k: 'c', label: 'Kwanza Seguros', ll: [-8.926, 13.180] },
+  { id: 'mutamba', k: 'c', label: 'Mutamba Logística', ll: [-8.889, 13.392] }
+];
+const map = L.map('map', { zoomControl: false }).setView([-8.87, 13.27], 12);
+// Mosaicos da Esri (sem chave nem Referer). Os do tile.openstreetmap.org exigem o cabeçalho Referer,
+// que este iframe (blob:) não envia — aparecia «Access blocked». A CARTO passou a pedir chave.
+L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Street_Map/MapServer/tile/{z}/{y}/{x}', { maxZoom: 19, attribution: 'Mapa © Esri · dados © OpenStreetMap e outros' }).addTo(map);
+L.control.zoom({ position: 'bottomright' }).addTo(map);
+L.circle(me, { radius: 4000, color: '#d9412b', weight: 1.5, dashArray: '4 6', fillColor: '#d9412b', fillOpacity: .06, interactive: false }).addTo(map);
+L.marker(me, { icon: L.divIcon({ className: '', html: '<div class="me"></div>', iconSize: null }), interactive: false }).addTo(map);
+P.forEach(p => {
+  const m = L.marker(p.ll, { icon: L.divIcon({ className: '', html: '<div class="pin ' + p.k + '">' + p.label + '</div>', iconSize: null }) }).addTo(map);
+  m.on('click', () => {
+    if (window.parent !== window) window.parent.postMessage({ bumba: 'open', id: p.id }, '*');
+    else m.bindPopup(p.label).openPopup();
+  });
+});
+map.fitBounds(P.map(p => p.ll).concat([me]), { paddingTopLeft: [30, 56], paddingBottomRight: [30, 40] });
+</script>
+</body>
+</html>
